@@ -14,8 +14,8 @@ function App() {
     <div>
       <NavbarMenu />
       <Routes>
-        {/* <Route path="/" element={<Home />}></Route>{" "} */}
-        <Route index element={<Home />} />
+        <Route path="/" element={<Home />}></Route>{" "}
+        {/* <Route index element={<Home />} /> */}
         <Route path="/Menu" element={<Menu />}></Route>
         <Route path="/Menu/MainDishes" element={<MainDishes />}></Route>
         <Route path="/Menu/BreakFastItems" element={<BreakFastItems />}></Route>
