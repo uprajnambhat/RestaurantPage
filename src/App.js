@@ -8,12 +8,14 @@ import MainDishes from "./components/MainDishes";
 import BreakFastItems from "./components/BreakFastItems";
 import Dessert from "./components/Dessert";
 import BrowseAll from "./components/BrowseAll";
+import { Navigate } from "react-router-dom";
 
 function App() {
   return (
     <div>
       <NavbarMenu />
       <Routes>
+        <Route path="/" element={<Navigate to="/RestaurantPage/" />} />
         <Route path="/" element={<Home />}></Route>{" "}
         {/* <Route index element={<Home />} /> */}
         <Route path="/Menu" element={<Menu />}></Route>
@@ -21,6 +23,8 @@ function App() {
         <Route path="/Menu/BreakFastItems" element={<BreakFastItems />}></Route>
         <Route path="/Menu/DessertMenu" element={<Dessert />}></Route>
         <Route path="/Menu/BrowseAll" element={<BrowseAll />}></Route>
+        {/* Redirect invalid paths to home */}
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </div>
   );
