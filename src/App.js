@@ -21,8 +21,8 @@ function App() {
         <Route path="/Menu/BreakFastItems" element={<BreakFastItems />}></Route>
         <Route path="/Menu/DessertMenu" element={<Dessert />}></Route>
         <Route path="/Menu/BrowseAll" element={<BrowseAll />}></Route>
-        {/* Redirect invalid paths to home */}
-        <Route path="*" element={<Navigate to="/" />} />
+        {/* Redirect invalid paths to home
+        <Route path="*" element={<Navigate to="/" />} /> */}
       </Routes>
     </div>
   );
